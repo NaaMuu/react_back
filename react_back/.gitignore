@@ -2,6 +2,7 @@
 
 # database
 /database.json
+/config.json
 
 # dependencies
 /node_modules
