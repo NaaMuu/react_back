@@ -53,7 +53,6 @@ app.get("/api/login", (req, res) => {
     }
     if (results.length > 0) {
       // 로그인 성공 시 JWT 토큰 발급
-      
       const token = jwt.sign({ id: results[0].id }, conf_c.secretKey, { expiresIn: '30m' });
       res.send({ success: true, user: results[0], token }); // 사용자 정보와 토큰을 반환
     } else {
